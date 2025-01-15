@@ -48,12 +48,13 @@ Make sure to replace your_username and your_password with the correct MySQL cred
 **3. Add MySQL Connector**<br>
 Download the MySQL JDBC connector (or use the Maven dependency) and add it to your project.<br>
 Maven dependency for the MySQL Connector/J:<br>
-
-<dependency><br>
-    <groupId>mysql</groupId><br>
-    <artifactId>mysql-connector-java</artifactId><br>
-    <version>8.0.29</version><br>
-</dependency><br>
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.29</version>
+</dependency>
+```
 
 **4. Run the Project**<br>
 Once you have set up the database and configured the connection, run the Main.java class to test CRUD operations.<br>
