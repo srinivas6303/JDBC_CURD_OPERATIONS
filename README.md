@@ -1,50 +1,49 @@
 # CRUD Operations with JDBC in Java
-This project demonstrates performing basic CRUD (Create, Read, Update, Delete) operations using JDBC in Java with MySQL as the database. 
-The project uses IntelliJ IDEA as the IDE and the MySQL Connector/J for connecting Java to the MySQL database.
+This project demonstrates performing basic CRUD (Create, Read, Update, Delete) operations using JDBC in Java with MySQL as the database. <br>
+The project uses IntelliJ IDEA as the IDE and the MySQL Connector/J for connecting Java to the MySQL database.<br>
 
 ## Project Structure
-The project consists of three main Java classes:
+The project consists of three main Java classes:<br>
 
 **Employee.java**
-This class represents the Employee entity with the following fields:
-id (int): The unique identifier for an employee.
-name (String): The name of the employee.
-salary (int): The salary of the employee.
-dept (String): The department the employee belongs to.
+This class represents the Employee entity with the following fields:<br>
+id (int): The unique identifier for an employee.<br>
+name (String): The name of the employee.<br>
+salary (int): The salary of the employee.<br>
+dept (String): The department the employee belongs to.<br>
 
 **CRUDMethods.java**
-This class contains methods to perform CRUD operations on the MySQL database:
-save(): Insert a new employee record.
-update(): Update an existing employee record.
-delete(): Delete an employee record by ID.
-getById(): Fetch an employee record by ID.
-findAll(): Retrieve all employee records from the database.
+This class contains methods to perform CRUD operations on the MySQL database:<br>
+save(): Insert a new employee record.<br>
+update(): Update an existing employee record.<br>
+delete(): Delete an employee record by ID.<br>
+getById(): Fetch an employee record by ID.<br>
+findAll(): Retrieve all employee records from the database.<br>
 
 **Main.java**
-This class contains the main() method where you can test the CRUD operations by creating instances of the CRUDMethods class and calling the respective methods.
+This class contains the main() method where you can test the CRUD operations by creating instances of the CRUDMethods class and calling the respective methods.<br>
 
 ## Setup Instructions
 **1. Install MySQL**
-Make sure MySQL is installed on your machine and running. Create a database named employee_db and a table called employee with the following structure:
+Make sure MySQL is installed on your machine and running. Create a database named employee_db and a table called employee with the following structure:<br>
 
-CREATE DATABASE employee_db;
-
-USE employee_db;
+CREATE DATABASE employee_db;<br>
+USE employee_db;<br>
 
 CREATE TABLE employee (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     salary INT,
     dept VARCHAR(255)
-);
+);<br>
 
 **2. Configure JDBC Connection**
-In the CRUDMethods.java class, ensure you have the correct database connection URL, username, and password:
+In the CRUDMethods.java class, ensure you have the correct database connection URL, username, and password:<br>
 
-String url = "jdbc:mysql://localhost:3306/employee_db";
-String username = "your_username";
-String password = "your_password";
-Make sure to replace your_username and your_password with the correct MySQL credentials.
+String url = "jdbc:mysql://localhost:3306/employee_db";<br>
+String username = "your_username";<br>
+String password = "your_password";<br>
+Make sure to replace your_username and your_password with the correct MySQL credentials.<br>
 
 **3. Add MySQL Connector**
 Download the MySQL JDBC connector (or use the Maven dependency) and add it to your project.
