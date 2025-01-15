@@ -16,6 +16,7 @@ public class CurdMethods {
 
     //SAVE
     public void save(Employee e) {
+        System.out.println("save method called!");
         String query = "INSERT INTO employee(id, name, salary, dept) VALUES (?, ?, ?, ?);";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -38,6 +39,7 @@ public class CurdMethods {
 
     //DELETE;
     public void delete(int id) {
+        System.out.println("delete method called!");
         String query = "delete from employee where id = ?";
 
 
@@ -58,6 +60,7 @@ public class CurdMethods {
 
     //UPDATE
     public void update(Employee e) {
+        System.out.println("update method called!");
         // Update query
         String updateQuery = "UPDATE employee SET name = ?, salary = ?, dept = ? WHERE id = ?";
 
@@ -87,6 +90,7 @@ public class CurdMethods {
 
     //GETBYID
     public void getById(int id){
+        System.out.println("getById method called!");
         String query="select * from employee where id =?";
 
         try(PreparedStatement preparedStatement=connection.prepareStatement(query)) {
@@ -109,6 +113,7 @@ public class CurdMethods {
 
     //FINDALL
     public void findAll() {
+        System.out.println("findAll method called!");
         String query = "SELECT * FROM employee";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -116,7 +121,7 @@ public class CurdMethods {
 
             // Check if there are any records and print the data
             while (resultSet.next()) {
-                System.out.println("====================================");
+
                 System.out.println("ID: " + resultSet.getInt("id"));
                 System.out.println("NAME: " + resultSet.getString("name"));
                 System.out.println("SALARY: " + resultSet.getInt("salary"));

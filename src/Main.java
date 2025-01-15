@@ -28,15 +28,29 @@ public class Main {
 
 
             Employee e = new Employee();
-            e.setId(101);
-            e.setName("srinu");
-            e.setSalary(10000);
-            e.setDept("Dev");
+            e.setId(104);
+            e.setName("viswa");
+            e.setSalary(30000);
+            e.setDept("SQLDEV");
 
-//              curdMethods.save(e);
-//              curdMethods.update(e);
-//            curdMethods.findAll();
-//            curdMethods.delete(104);
+            //save
+            curdMethods.save(e);
+            curdMethods.findAll();
+
+            //update
+            e.setId(104);
+            e.setName("Psvk Viswas");
+            e.setSalary(30000);
+            e.setDept("Developer");
+            curdMethods.update(e);
+            curdMethods.findAll();
+
+            //delete
+           curdMethods.delete(104);
+           curdMethods.findAll();
+
+           //getById
+           curdMethods.getById(101);
 
         } catch (SQLException ex) {
             ex.printStackTrace();
