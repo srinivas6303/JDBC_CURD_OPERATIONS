@@ -1,4 +1,4 @@
-CRUD Operations with JDBC in Java
+# CRUD Operations with JDBC in Java
 This project demonstrates performing basic CRUD (Create, Read, Update, Delete) operations using JDBC in Java with MySQL as the database. 
 The project uses IntelliJ IDEA as the IDE and the MySQL Connector/J for connecting Java to the MySQL database.
 
